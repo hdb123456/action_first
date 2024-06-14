@@ -1,12 +1,9 @@
 # Directory Structure
 
-Generated at: Fri Jun 14 12:10:58 UTC 2024
+Generated at: Fri, 14 Jun 2024 12:35:21 +0000
 
-.
-├── README.md
-├── directory.md
-├── fs
-└── sdf
-
-1 directory, 3 files
-
+    .github/workflows/first.yml
+    .github/workflows/update_readme.sh
+    README.md
+    fs/fsdfsfsd
+    sdf
