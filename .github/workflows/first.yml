@@ -15,15 +15,16 @@ jobs:
         # 生成目录结构
         tree -L 1 > directory.md
 
-    - name: Update README.md
-      run: |
+        - name: Update README.md
+        run: |
         echo "# Directory Structure" > README.md
         echo "" >> README.md
-        echo "Generated at: $(date)" >> README.md
+        echo "Generated at: $(date -R)" >> README.md
         echo "" >> README.md
-        cat directory.md >> README.md
+        git ls-files --exec='echo {}' | sed 's|^|    |' | cat >> README.md
         git add README.md
         git commit -m "Update directory structure in README"
+
 
     - name: Push Changes
       run: |
