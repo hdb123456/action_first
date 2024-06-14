@@ -12,6 +12,8 @@ jobs:
       run: |
         # 生成目录结构
         tree -L 1 > directory.md
+        git config user.email "2755631915@qq.com"
+        git config user.name "hdb123456"
 
     - name: Update README.md
       run: |
@@ -19,7 +21,7 @@ jobs:
         echo "" >> README.md
         echo "Generated at: $(date -R)" >> README.md
         echo "" >> README.md
-        git ls-files --exec='echo {}' | sed 's|^|    |' | cat >> README.md
+        git ls-files | sed 's|^|    |' | cat >> README.md
         git add README.md
         git commit -m "Update directory structure in README"
 
